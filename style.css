@@ -1,0 +1,1191 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+}
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+/**************************/
+/* HEADER */
+/**************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+
+  /* Because we want header to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.logo {
+  height: 6.8rem;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.main-nav-link {
+  padding: 1rem 2rem;
+  border-radius: 9px;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #271344;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #ff4880;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #ff4880;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #f82e6b;
+}
+.search-button {
+  width: 50px;
+  height: 50px;
+  background-color: #ff4880; /* Roz */
+  border-radius: 50%; /* Face butonul rotund */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  position: relative;
+  border: none; /* Elimină orice bordură implicită */
+}
+
+.search-button::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px dashed #ff4880; /* Bordură punctată roz */
+  border-radius: 50%; /* Face bordura rotundă */
+}
+
+.search-icon {
+  font-size: 18px; /* Dimensiunea iconiței */
+  color: white; /* Culoarea iconiței */
+}
+/**************************/
+/* BACKGROUND HEADER */
+/**************************/
+.header-background {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url(img/background.png);
+  background-size: cover;
+}
+
+.header-container {
+  width: 1200px;
+  position: absolute;
+  /* In relation to PARENT size */
+  left: 50%;
+  top: 50%;
+
+  /* In relation to ELEMENT size */
+  transform: translate(-50%, -50%);
+}
+.header-container-inner {
+  width: 50%;
+}
+
+h1 {
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ff4880;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-family: Akronim, sans-serif;
+  margin-bottom: 2.3rem;
+}
+.header-description {
+  color: #271344;
+  font-size: 2.8rem;
+  font-family: Sriracha, sans-serif;
+  font-weight: 400;
+  margin-bottom: 3.8rem;
+}
+.general-btn:link,
+.general-btn:visited {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #ff4880;
+  display: inline-flex; /* Aliniază pe aceeași linie */
+  align-items: center; /* Centrează iconița și textul pe verticală */
+}
+.general-btn:hover,
+.general-btn:active,
+.events-btn:hover,
+.events-btn:active {
+  background-color: #271344;
+}
+.general-btn span,
+.register-btn span {
+  display: inline-flex;
+  align-items: center; /* Aliniază iconița pe verticală */
+  margin-left: 5px; /* Adaugă un mic spațiu între text și iconiță */
+}
+
+.arrow-right {
+  font-size: 2.5rem;
+  transition: green 0.3s;
+}
+/****************************************/
+/*    Image of bird           */
+.moving-image-left-right {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  animation: moveLeftRight 2s ease-in-out infinite alternate;
+  margin-top: 120px;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(-10px); /* Se mută la stânga */
+  }
+  100% {
+    transform: translateX(10px); /* Se mută la dreapta */
+  }
+}
+/****************************************/
+/*    Image of cloud           */
+.moving-image-top-bottom {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  transform: translateX(-50%);
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 50px; /* Începutul mai jos */
+  }
+  50% {
+    top: 70px; /* Se mișcă mai jos */
+  }
+  100% {
+    top: 50px; /* Revine la poziția inițială */
+  }
+}
+
+/* DE CE SA NE ALEGI PE NOI?*/
+
+.secondary-header {
+  font-size: 1.7rem;
+  color: #f82e6b;
+  font-family: "Schoolbell", cursive;
+  margin-bottom: 2.6rem;
+  text-align: center;
+}
+.title {
+  color: #271344;
+  font-size: 3.8rem;
+  font-family: "Fredoka One", sans-serif;
+  font-weight: 800;
+  margin-bottom: 2.6rem;
+}
+.general-p {
+  font-size: 1.5rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+.p-align-center {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.margin-top {
+  margin-top: 10rem;
+}
+.margin-bottom {
+  margin-bottom: 10rem;
+}
+.padding-top {
+  padding-top: 7rem;
+}
+.padding-bottom {
+  padding-bottom: 7rem;
+}
+
+.moving-image-left-right-bee {
+  position: absolute;
+  animation: moveLeftRight 2s ease-in-out infinite alternate;
+  left: 48%;
+  margin-top: 1.5rem;
+}
+.grid {
+  display: grid;
+  column-gap: 5.4rem;
+  row-gap: 8.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--3-cols-class {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.grid--4-cols,
+.grid--4-cols-cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+/***********************************************************************/
+/******CARDS IMG *******/
+/***********************************************************************/
+
+.color-first-card {
+  background-color: #ff6666;
+}
+.color-second-card {
+  background-color: #ffc000;
+}
+.color-third-card {
+  background-color: #abcd52;
+}
+.color-fourth-card {
+  background-color: #1ab9ff;
+}
+
+.center {
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.whole-card {
+  text-align: center;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out; /* Face ridicarea mai lentă */
+}
+
+.border-container {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+.border-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 3px dashed white;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out;
+}
+
+.round-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  background-color: #f82e6b;
+  transition: transform 0.3s ease-out;
+}
+
+/* Animatie aplicata  cand  hover pe intregul card */
+.whole-card:hover .border-container::before {
+  animation: rotateBorder 5s linear infinite;
+}
+
+.whole-card:hover .round-img {
+  transform: scaleX(-1); /* Oglindire pe orizontală */
+}
+
+.whole-card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/***********************************************************************/
+/******CARDS CONTENT *******/
+/***********************************************************************/
+.card-content {
+  margin-top: 2.5rem;
+  padding: 2rem 2rem;
+}
+.card-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.6rem;
+  color: #fff;
+}
+.card-description {
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1.8;
+}
+
+/***********************************************************/
+/*   Ești interesat cum poți să îți înscrii copilul la Grădinița Tărâmul Zânelor? */
+/***********************************************************/
+.third-heading {
+  font-size: 2.5rem;
+  font-family: "Fredoka One ", sans-serif;
+  color: #271344;
+  margin-bottom: 2.5rem;
+}
+.third-heading span {
+  color: #ff4880;
+}
+/***********************************************************/
+/*VALORILE NOASTRE*/
+/***********************************************************/
+.p-line-height {
+  line-height: 1.5;
+}
+.p-text-align {
+  text-align: justify;
+}
+
+.img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagine {
+  position: relative;
+  animation: moveImage 2s ease-in-out infinite; /* Animația cu mișcare lină */
+}
+
+/* Definirea animației */
+@keyframes moveImage {
+  0% {
+    transform: translateX(-10px); /* Mișcare ușoară spre stânga */
+  }
+  50% {
+    transform: translateX(10px); /* Mișcare ușoară spre dreapta */
+  }
+  100% {
+    transform: translateX(-10px); /* Mișcare ușoară înapoi la stânga */
+  }
+}
+
+.more-information-background {
+  background-color: #fcf9f4;
+}
+/********************************************/
+/* ICONS  */
+/********************************************/
+.icons {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container {
+  background-color: #e25555;
+  margin-bottom: 25px;
+  border: 2px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+}
+.heart-container::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px dashed #e25555; /* Bordură punctată roz */
+  border-radius: 50%; /* Face bordura rotundă */
+}
+
+.trust-container {
+  background-color: #40ef81;
+  margin-bottom: 25px;
+  border: 2px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+}
+.trust-container::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px dashed #40ef81; /* Bordură punctată roz */
+  border-radius: 50%; /* Face bordura rotundă */
+}
+
+.development-container {
+  background-color: #1ab9ff;
+  margin-bottom: 25px;
+  border: 2px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+}
+.development-container::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px dashed #1ab9ff; /* Bordură punctată roz */
+  border-radius: 50%; /* Face bordura rotundă */
+}
+
+.attention-container {
+  background-color: #ffc000;
+  margin-bottom: 25px;
+  border: 2px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+}
+.attention-container::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px dashed #ffc000; /* Bordură punctată roz */
+  border-radius: 50%; /* Face bordura rotundă */
+}
+
+.conection-container {
+  background-color: #cb7cd6;
+  margin-bottom: 25px;
+  border: 2px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+}
+.conection-container::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px dashed #cb7cd6; /* Bordură punctată roz */
+  border-radius: 50%; /* Face bordura rotundă */
+}
+.icons-color {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+.icons-title {
+  color: #271344;
+  font-size: 2.8rem;
+  font-family: "Fredoka One", sans-serif;
+  font-weight: 800;
+  margin-bottom: 2.6rem;
+}
+/******************/
+.round-corner {
+  background-color: #1ab9ff;
+  border-radius: 15px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  height: 24px;
+  width: 24px;
+}
+
+/************************************************************************/
+/***********************FAQ***************************/
+/************************************************************************/
+.title-faq {
+  color: #fff;
+  font-size: 3.8rem;
+  font-family: "Fredoka One", sans-serif;
+  font-weight: 800;
+  margin-bottom: 2.6rem;
+  text-align: center;
+}
+.p-faq {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Fredoka One", sans-serif;
+  margin-bottom: 2.6rem;
+  text-align: center;
+}
+.section-faq {
+  background-color: #271344;
+}
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 0 20px 0 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-toggle {
+  background: #ff4880;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.faq-answer {
+  display: none;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 30px 30px 28px 20px;
+  border-top: 1px solid rgba(119, 119, 119, 0.13);
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-toggle {
+  background: #ff4880;
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.img-icon-bear {
+  padding: 12px;
+  background-color: #ffefef;
+  border-right: 1px solid rgba(119, 119, 119, 0.13);
+  border-radius: 10px 0 0 0;
+}
+.img-icon-car {
+  padding: 12px;
+  background-color: #fff9e5;
+  border-right: 1px solid rgba(119, 119, 119, 0.13);
+}
+
+.img-icon-cube {
+  padding: 12px;
+  background-color: #eef5dc;
+  border-right: 1px solid rgba(119, 119, 119, 0.13);
+}
+
+.img-icon-accordion {
+  padding: 12px;
+  background-color: #e8f8ff;
+  border-right: 1px solid rgba(119, 119, 119, 0.13);
+}
+
+.img-icon-toy {
+  padding: 12px;
+  background-color: #ff4880;
+  border-right: 1px solid rgba(119, 119, 119, 0.13);
+  border-radius: 0 0 0 10px;
+}
+
+.ternary-heading {
+  font-size: 17px;
+}
+
+/************************************************************************/
+/***********************   CLASE Gradinita   ***************************/
+/************************************************************************/
+.kindergarten-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  border-radius: 20px 20px 20px 20px;
+  padding-bottom: 15px;
+}
+.title-class {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Rochester", Sans-serif;
+  font-weight: 600;
+  color: #ff7800;
+  margin-bottom: 12px;
+}
+.age {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border {
+  border-bottom: 2px solid #ff7800;
+}
+
+.kindergarten-button-more {
+  background-color: #50c240; /* Verde */
+  color: white; /* Text alb */
+  font-family: "Mulish", sans-serif; /* Font */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px 0 20px 0; /* Colțuri rotunjite */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Spațiu între icon și text */
+  cursor: pointer;
+  box-shadow: -2px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* pentru centrare verticală */
+}
+
+.kindergarten-button-more:hover {
+  background-color: #45b038; /* Schimbă culoarea la hover */
+}
+.age {
+  border-top: 1px solid #ff7800;
+  font-size: 15px;
+  font-color: #7a7a7a;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 9px;
+}
+
+.background {
+  background-color: #fcf9f4;
+}
+/*****************************************/
+/************* COUNTER CONTAINER ****************************/
+/*****************************************/
+.grass {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  background-color: #fcf9f4;
+}
+.container-for-counter {
+  background-color: #abcd52;
+  color: black;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin: 30px 50px;
+  padding: 20px;
+}
+
+.counter,
+.p-counter {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+}
+.counter-icon {
+  width: 4.4rem;
+  height: 4rem;
+  color: #fff;
+}
+.counter-container span {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #fff;
+}
+.rotate-border {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin: 30px 50px;
+  padding: 100px; /* Crește padding-ul pentru a obține mai mult spațiu */
+  width: 180px; /* Mărește dimensiunile pentru un cerc mai mare */
+  height: 180px;
+  border-radius: 50%;
+}
+
+.rotate-border::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 3px dashed white;
+  border-radius: 50%; /* Bordură circulară */
+  animation: rotateBorder 15s linear infinite; /* Efect de rotație */
+}
+
+/* Animația pentru bordură */
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/*****************************************/
+/************* EVENIMENTE ****************************/
+/*****************************************/
+.image-container {
+  position: relative; /* Face ca butonul să fie poziționat relativ la acest div */
+  width: 100%;
+  height: 250px; /* Ajustează după nevoie */
+  overflow: hidden;
+}
+
+.events-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: rgba(39, 19, 68, 0.7);
+}
+
+.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 19, 68, 0.7); /* Overlay mov */
+}
+
+.events-btn {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #ff4880;
+  display: inline-flex; /* Aliniază pe aceeași linie */
+  align-items: center;
+  gap: 5px;
+}
+/**********************************/
+/************* NEWS*********************/
+/**********************************/
+
+.news-container-img {
+  overflow: hidden; /* Ascunde părțile care ies în afară */
+  display: inline-block; /* Evită probleme de aliniere */
+  border-radius: 15px;
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asigură umplerea corectă */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.news-container-img:hover .news-img {
+  transform: scale(1.1);
+  /* Zoom-in fără să afecteze dimensiunea containerului */
+}
+
+.news-container {
+  max-width: 90rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.news-title {
+  color: #271344;
+  font-size: 2.6rem;
+  font-family: "Fredoka One", sans-serif;
+  font-weight: 600;
+  margin-top: 24.6px;
+  margin-bottom: 2.6rem;
+}
+
+/************************/
+/*********** GALLERY  *************/
+/************************/
+.grid--3-cols--gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(133, 41, 87, 0.7);
+  border-radius: 15px;
+  transform: translateY(
+    100%
+  ); /* La început, overlay-ul va fi ascuns deasupra imaginii */
+  opacity: 0;
+  width: 100%;
+  height: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease-in-out; /* Animația de sus în jos */
+}
+.image-container:hover .overlay {
+  opacity: 1; /* Devine vizibil la hover */
+}
+.zoom-btn {
+  background-color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.image-container:hover .overlay {
+  transform: translateY(
+    0
+  ); /* Când treci cu mouse-ul peste imagine, overlay-ul coboară */
+}
+
+.full-image-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.full-image-container img {
+  max-width: 95%;
+  max-height: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+/************************/
+/*********** REGISTER  *************/
+/************************/
+.background-register {
+  background-color: #abcd52;
+}
+h4 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+h4 span {
+  color: #f82e6b;
+}
+.register-p {
+  color: #fff;
+  font-size: 18px;
+}
+.container-register {
+  display: flex;
+  gap: 20px;
+}
+
+.register-btn:link,
+.register-btn:visited {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #ff4880;
+  display: inline-flex; /* Aliniază pe aceeași linie */
+  align-items: center; /* Centrează iconița și textul pe verticală */
+}
+.register-btn:hover,
+.register-btn:active {
+  background-color: #271344;
+}
+
+/* FOOTER*/
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid-f {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.footer {
+  padding: 12.8rem 0;
+  background-color: #271344;
+  color: #fff;
+}
+
+.grid--footer {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+  fill: #fff;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #fff;
+}
+.input-email {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #f82e6b;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-email ::placeholder {
+  color: #fff;
+}
+
+.input-email *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}

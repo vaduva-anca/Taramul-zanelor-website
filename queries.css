@@ -1,0 +1,245 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 120em) {
+  .header {
+    position: static !important; /* Elimină sticky */
+  }
+  .moving-image-left-right {
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    animation: moveLeftRight 2s ease-in-out infinite alternate;
+    margin-top: 0.1px;
+  }
+  .moving-image-top-bottom {
+    transform: translateY(-50%);
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) 
+/**************************/
+
+@media (max-width: 115em) {
+  .header-container {
+    padding-left: 4rem;
+    padding-top: 10rem;
+  }
+
+  .main-nav-list {
+    gap: 2rem;
+  }
+  .overlay {
+    width: 100%;
+    height: 50%;
+    transform: translateY(10%);
+  }
+}
+@media (max-width: 99em) {
+  .header-container {
+    padding-left: 28rem;
+    padding-top: 10rem;
+  }
+  .main-nav-list {
+    gap: 1.6rem;
+  }
+  .grid {
+    row-gap: 2.4rem;
+    column-gap: 3.4rem;
+  }
+  .rotate-border {
+    padding: 80px;
+    width: 100px;
+    height: 100px;
+  }
+  .container-register {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.4rem;
+  }
+  .overlay {
+    width: 100%;
+    height: 50%;
+    transform: translateY(10%);
+  }
+}
+
+@media (max-width: 85em) {
+  .main-nav-list {
+    gap: 1rem;
+  }
+
+  .grid {
+    column-gap: 3rem;
+  }
+  .rotate-border {
+    padding: 65px;
+    width: 80px;
+    height: 80px;
+  }
+  .container-register {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.4rem;
+  }
+
+  .counter,
+  .p-counter {
+    font-size: 28px;
+  }
+  .counter-icon {
+    width: 4rem;
+    height: 3.6rem;
+    color: #fff;
+  }
+  .counter-container span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .overlay {
+    width: 100%;
+    height: 50%;
+    transform: translateY(10%);
+  }
+}
+
+@media (max-width: 65em) {
+  .secondary-header {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+  .general-p {
+    font-size: 1.2rem;
+  }
+  .grid--4-cols-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-for-counter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rotate-border {
+    padding: 75px;
+    width: 80px;
+    height: 80px;
+  }
+  .news-title {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .register-p {
+    font-size: 16px;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overlay {
+    width: 100%;
+    height: 50%;
+    transform: translateY(10%);
+  }
+
+  .grid--3-cols--gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+}
+
+@media (max-width: 50em) {
+  .header-container {
+    padding-left: 40rem;
+    padding-top: 10rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .header-description {
+    font-size: 2rem;
+  }
+
+  .secondary-header {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+  .general-p {
+    font-size: 1.2rem;
+  }
+  .grid--4-cols-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--3-cols-class {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+  }
+  .grid--3-cols--gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container-for-counter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rotate-border {
+    padding: 75px;
+    width: 80px;
+    height: 80px;
+  }
+  .news-title {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .register-p {
+    font-size: 16px;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overlay {
+    width: 100%;
+    height: 35%;
+    transform: translateY(10%);
+  }
+
+  .grid--3-cols--gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+}
