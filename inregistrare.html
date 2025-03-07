@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="inregistrare.css" />
+    <title>Inscrie-te acum</title>
+  </head>
+  <body>
+    <section class="margin-bottom">
+      <header class="header">
+        <a href="#">
+          <img class="logo" alt="Grădinița logo" src="img/logo.png" />
+        </a>
+
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link nav-cta" href="#">Acasa</a></li>
+            <li><a class="main-nav-link" href="#about-us">Despre noi</a></li>
+            <li><a class="main-nav-link" href="#section-class">Clase</a></li>
+            <li><a class="main-nav-link" href="#domenii">Domenii</a></li>
+            <li>
+              <a class="main-nav-link" href="#about-teachers">Profesori</a>
+            </li>
+            <li><a class="main-nav-link" href="#">Inscrie-te acum</a></li>
+            <li class="search-button">
+              <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+    <div class="c-img">
+        <img class="img-inscriere" src="img/inscriere.jpeg" />
+        <div class="text-peste-imagine">Înscrie-te acum!</div>
+    </div>
+   
+
+    <section class="center-c">
+      <form>
+        <div class="flex-c container-inscriere">
+          <h5>Date despre copil:</h5>
+          <div class="container-grid-2-cols">
+            <input
+              type="text"
+              id="input-info"
+              name="firstname"
+              placeholder="Name"
+            />
+            <input type="text" id="input-info" placeholder="Prenume" />
+          </div>
+          <input
+            type="numer"
+            id="input-info"
+            name="firstname"
+            placeholder="CNP"
+          />
+          <div class="container-grid-2-cols">
+            <input type="date" id="input-info" placeholder="zz.ll.aaaa" />
+            <input type="text" id="input-info" placeholder="Locul nasterii" />
+          </div>
+
+          <div class="container-grid-2-cols">
+            <input type="text" id="input-info" placeholder="Nationalitate" />
+            <input type="text" id="input-info" placeholder="Cetatenie" />
+          </div>
+          <input type="text" id="input-info" placeholder="Religia" />
+          <input type="text" id="input-info" placeholder="Afectiuni/Alergii" />
+          <input type="text" id="input-info" placeholder="Cerinte speciale" />
+          <input type="text" id="input-info" placeholder="Adresa" />
+          <input
+            type="text"
+            id="input-info"
+            placeholder="Telefon situatii urgenta"
+          />
+
+          <div class="container-grid-2-cols">
+            <input
+              type="text"
+              id="input-info"
+              placeholder="Limba vorbita in familie de mama"
+            />
+            <input
+              type="text"
+              id="input-info"
+              placeholder="Limba vorbita in familie de tata"
+            />
+          </div>
+
+          <p class="general">
+            Nivelul de cunoastre a limbii germane a copilului (se bifează căsuţa
+            corespunzătoare)
+          </p>
+
+          <div class="radio-btn">
+            <span class="general">Întelege</span>
+            <input type="radio" id="incepator" name="nivel" value="incepator" />
+            <label for="incepator">Începător</label>
+
+            <input
+              type="radio"
+              id="intermediar"
+              name="nivel"
+              value="intermediar"
+            />
+            <label for="intermediar">Intermediar</label>
+
+            <input
+              type="radio"
+              id="avansat"
+              name="nivel"
+              value="avansat"
+              checked
+            />
+            <label for="avansat">Avansat</label>
+          </div>
+
+          <div class="radio-btn">
+            <span class="general">Vorbeste</span>
+            <input type="radio" id="incepator" name="nivel" value="incepator" />
+            <label for="incepator">Începător</label>
+
+            <input
+              type="radio"
+              id="intermediar"
+              name="nivel"
+              value="intermediar"
+            />
+            <label for="intermediar">Intermediar</label>
+
+            <input
+              type="radio"
+              id="avansat"
+              name="nivel"
+              value="avansat"
+              checked
+            />
+            <label for="avansat">Avansat</label>
+          </div>
+        </div>
+      </form>
+    </section>
+
+
+
+    <section class="center-c mom-section">
+        <form>
+
+            <div class="flex-c container-inscriere  ">
+              <h5>Date despre mama:</h5>
+          <div class="container-grid-2-cols">
+            <input type="text" class = "name-mama" id="input-info" placeholder="Nume" />
+            <input type="text" class = "prenume-mama" id="input-info" placeholder="Prenume" />
+          </div>
+          <input type="text" id="input-info" placeholder="Varsta " />
+          <input type="text" id="input-info" placeholder="Ocupatie/Functie" />
+          <div class="container-grid-2-cols">
+            <input type="tel" id="input-info" placeholder="Telefon fix serviciu" />
+            <input type="tel" id="input-info" placeholder="Telefon mobil" />
+          </div>
+          <input type="email" class = "email-mama" id="input-info" placeholder="Email" />
+        </form>
+    </section>
+
+
+    <section class="center-c">
+        <form>
+
+            <div class="flex-c container-inscriere  ">
+              <h5>Date despre tata:</h5>
+          <div class="container-grid-2-cols">
+            <input type="text" class = "name-tata" id="input-info" placeholder="Nume" />
+            <input type="text" class = "prenume-tata" id="input-info" placeholder="Prenume" />
+          </div>
+          <input type="text" id="input-info" placeholder="Varsta " />
+          <input type="text" id="input-info" placeholder="Ocupatie/Functie" />
+          <div class="container-grid-2-cols">
+            <input type="tel" id="input-info" placeholder="Telefon fix serviciu" />
+            <input type="tel" id="input-info" placeholder="Telefon mobil" />
+          </div>
+          <input type="email" class = "email-tata" id="input-info" placeholder="Email" />
+        </form>
+    </section>
+
+<section class="center-c container-inscriere">
+    <h5>Alegere program :</h5>
+    <div class="flex-c">
+    <form>
+        
+            
+            <div class=" flex-c ">
+                <span>  
+                    <input type="radio" id="program"  value="program" />
+                    <label for="program">Program lung 1350 lei + 16lei Masa/Zi</label>
+                    </span>
+          
+          
+
+
+                <div class="checkbox-container">
+                  <input type="checkbox" id="checkbox1">
+                  <label for="checkbox1">Am fost înştiinţat de către conducerea Grădiniţei în legatură cu bolile ce pot fi contactate în colectivitate şi sunt riscuri pe care le înţelegem şi ni le asumăm.</label>
+              </div>
+              <div class="checkbox-container">
+                  <input type="checkbox" id="checkbox2">
+                  <label for="checkbox2">Sunt de acord cu prelucrarea datelor cu caracter personal.</label>
+              </div>
+              <span class="btn">
+              <button class="submit-button submmit-button-test">Trimite cererea</button> 
+        </div>
+        </form>
+</section>
+
+
+<section class="container">
+    
+    <div class="accordion margin-top">
+        <h5>Pasi pentru inscriere:</h5>
+        <div class="accordion-header" onclick="toggleAccordion()">
+            <span class="general-context">Pasul 1:Explorati optiunile</span>
+            <span id="toggle-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            Grădinița noastră oferă o varietate larga de opțiuni pentru copilul dumneavoastră.
+        </div>
+    
+    
+    
+        <div class="accordion-header" onclick="toggleAccordion()">
+            <span class="general-context">Pasul 2:Trimiteți cererea dumneavoastră</span>
+            <span id="toggle-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            Completați datele cerute in formularul alăturat după care trimiteți cererea.
+        </div>
+    
+    
+        <div class="accordion-header" onclick="toggleAccordion()">
+            <span class="general-context">Pasul 3:Primiți confirmarea</span>
+            <span id="toggle-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            După ce ați completat si trimis formularul alăturat veți primi o confirmare prin email.
+            Datele completate vor fi evaluate de echipa noastră după care veți intra in legătura directa cu noi.
+        </div>
+    
+    
+        <div class="accordion-header" onclick="toggleAccordion()">
+            <span class="general-context">Pasul 4:Alocarea grupei</span>
+            <span id="toggle-icon">+</span>
+        </div>
+        <div class="accordion-content">
+            După ce am examinat datele si am comunicat dumneavoastră urmează sa stabilim grupa corespunzătoare pentru copilul dumneavoastră .
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="acte">
+        <h6> <ion-icon name="alert-circle-outline"></ion-icon> ACTE / ANALIZE INSCRIERE</h6>
+        <ol>
+            <li>Copie dupa certificatul de nastere al copilului;</li>
+            <li> Copii dupa actele de identitate ale parintilor;</li>
+            <li>Fisa medicala completata de catre medicul de familie/ pediatru ( aviz epidemiologic pentru intrarea copilului in colectivitate );</li>
+            <li> Copie dupa carnetul de vaccinari al copilului;</li>
+            <li>Buletinele de analize obligatorii pentru copii:</li>
+            <li>Examen coproparazitologic;</li>
+        </ol>
+    </div>
+    </div>
+    
+    
+    <div class="container">
+    <div class="acte">
+        <h6> <ion-icon name="bag-remove-outline"></ion-icon> Ce punem în bagajul zilnic:</h6>
+        <ol>
+            <li>Pijama (cu numele scris );</li>
+            <li> Haine de schimb( in functie de anotimp);</li>
+            <li>Bavetica din plastic( daca este cazul);</li>
+            <li>Sticla pentru apa(personalizata);</li>
+            <li>Papuci pentru interior;</li>
+            <li>Pampers(daca este cazul);</li>
+            <li>Servetele umede;</li>
+            <li>Rucsac/gentuta/saculet personalizat pentru lucrurile personale</li>
+        </ol>
+    </div>
+    </div>
+    
+    
+    <div class="container">
+    <div class="acte">
+        <h6> <ion-icon name="time-outline"></ion-icon> Program</h6>
+        <ol>
+            <li> Program lung 1350 Lei + 16 Lei Masa/Masa/Zi</li>
+            <li> Program scurt 1110 Lei + 12 Lei Masa/Zi</li>
+            
+        </ol>
+    </div>
+    </div>
+    
+    
+    <footer class="footer">
+        <div class="container grid-f grid--footer">
+          <div class="logo-col">
+            <a href="#" class="footer-logo">
+              <img class="logo" alt="Taramul zanelor logo" src="img/logo.png" />
+            </a>
+            <ul class="social-links">
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a class="footer-link" href="#"
+                  ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+            </ul>
+    
+            <p class="copyright">
+              Grădinița cu predare în limba germană Tărâmul Zânelor Sibiu,   locul unde fiecare zi este o nouă poveste.
+            </p>
+          </div>
+    
+          <div class="address-col">
+            <p class="footer-heading">Contactează-ne</p>
+            <address class="contacts">
+              <p class="address">
+                Sibiu, Str. Piaţa Tălmaciu, Nr. 2
+              </p>
+              <p>
+                <a class="footer-link" href="tel:415-201-6370">0751 305 677</a
+                ><br />
+                <a class="footer-link" href="mailto:contact@taramulzanelor.com"
+                  >contact@taramulzanelor.com</a
+                >
+              </p>
+            </address>
+          </div>
+    
+    
+    
+          
+    
+          <nav class="nav-col">
+            <p class="footer-heading">Abonare la știri</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Abunează-te la Subscribe to our Newsletter right now to be updated.</a></li>
+    
+              <li><input class="input-email" type="email" id="email" name="email" placeholder="Email" required></li>
+              <li> <a href="#" class="general-btn">Inscrieti-va<span><ion-icon class ="arrow-right"name="arrow-forward-circle-outline"></ion-icon></span></a></li>
+              
+            </ul>
+            
+          </nav>
+    
+          <nav class="nav-col">
+            <p class="footer-heading">Meniu</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">Despre noi</a></li>
+              <li><a class="footer-link" href="#">Clase</a></li>
+              <li><a class="footer-link" href="#">Evenimente</a></li>
+              <li><a class="footer-link" href="#">profesori</a></li>
+            </ul>
+          </nav>
+    
+        </div>
+      </footer>
+    
+    
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

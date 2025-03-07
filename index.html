@@ -9,7 +9,13 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    
     <title>Grădinița cu Program Prelungit</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
@@ -51,12 +57,19 @@
           <li><a class="main-nav-link" href="#section-class">Clase</a></li>
           <li><a class="main-nav-link" href="#domenii">Domenii</a></li>
           <li><a class="main-nav-link" href="#about-teachers">Profesori</a></li>
-          <li><a class="main-nav-link" href="#">Inscrie-te acum</a></li>
+          <li><a class="main-nav-link" href="inregistrare.html">Inscrie-te acum</a></li>
           <li class="search-button">
             <ion-icon class="search-icon" name="search-outline"></ion-icon>
           </li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+
     </header>
 
     <div class="header-background">
@@ -74,14 +87,14 @@
             liber,creștem armonios.
           </p>
         
-            <a href="#" class="general-btn">Află mai multe  <span><ion-icon class ="arrow-right"name="arrow-forward-circle-outline"></ion-icon></span></a>
+            <a href="#about-us" class="general-btn">Află mai multe  <span><ion-icon class ="arrow-right"name="arrow-forward-circle-outline"></ion-icon></span></a>
             
       </div>
     </div>
 
   </section>
 
-    <section class="margin-bottom first-section" id="about-us">
+    <section class="section margin-bottom first-section" id="about-us">
       <div class="container">
         <h2 class="secondary-header">DE CE SA NE ALEGI PE NOI</h2>
         <p class="title p-align-center">
@@ -165,7 +178,7 @@
 
 
 
-<section class="container">
+<section class=" section container">
 <div class="margin-bottom">
 <h3 class="third-heading"><span>Ești interesat</span> cum poți să îți înscrii copilul la Grădinița Tărâmul Zânelor?</h3>
 
@@ -178,7 +191,7 @@
 
 
 
-<section class="padding-bottom padding-top more-information-background">
+<section class=" section padding-bottom padding-top more-information-background">
   
 <div class="container padding-top ">
 <p class="title">Ghidarea tinerelor generații spre reușită </p>
@@ -212,7 +225,7 @@
 
 </section>
 
-<section class="padding-bottom">
+<section class=" section padding-bottom">
 <div class= "grid grid--3-cols margin-bottom" >
   <div class="img-center">
   <img src="img/sun.png" alt="Moving Image" width="131px";
@@ -302,7 +315,7 @@
 </section>
 
 
-<section class="section-faq  padding-top padding-bottom margin-bottom" id="domenii">
+<section class=" section section-faq  padding-top padding-bottom margin-bottom" id="domenii">
   <div class="container padding-top  padding-bottom">
     <h2 class="secondary-header">Programul nostru</h2>
     <p class="title-faq">
@@ -411,7 +424,7 @@
 
 </section>
 
-<section class="margin-bottom" id="section-class" >
+<section class=" section margin-bottom" id="section-class" >
 
 <div class="container  margin-bottom " >
   <h2 class="secondary-header">Învățarea prin joacă</h2>
@@ -482,8 +495,8 @@
 </section>
 
 
-<section class="background  padding-top"> 
-<div class="container  ">
+<section class=" -section background  padding-top"> 
+<div class="container margin-bottom ">
   <h2 class="secondary-header">Ce parere au parintii despre gradinita noastra</h2>
   <p class="title p-align-center">
     Recenzii
@@ -491,12 +504,41 @@
   <p class="general-p p-align-center" >Să explorăm ce au de spus părinții despre noi.</p>
   
 </div>
+
+
+
+
+<div class="container">
+<div class="testimonial-container">
+  <div class="progress-bar"></div>
+  <div class="fas fa-quote-right fa-quote"></div>
+  <div class="fas fa-quote-left fa-quote"></div>
+  <p class="testimonial">
+    Sunt extrem de mulțumită de această grădiniță! Educatoarele sunt atente și grijulii, iar activitățile sunt variate și educative. Copilul meu merge cu drag în fiecare dimineață și a învățat multe lucruri noi. Recomand cu căldură!
+  </p>
+  <div class="user">
+    <img
+      src="https://randomuser.me/api/portraits/women/40.jpg"
+      alt="user"
+      class="user-image"
+    />
+    <div class="user-details">
+      <h4 class="username">Miyah Myles</h4>
+      <p class="role">Accountant</p>
+    </div>
+  </div>
+</div>
+</div>
 <img src="img/grass.png"  class="grass"alt="Grass Image">
 
 </section>
 
 
-<section class="margin-bottom"> 
+
+
+
+
+<section class=" section margin-bottom"> 
   
   <div class="container-for-counter padding-bottom padding-top">
     <div class="rotate-border">
@@ -536,7 +578,7 @@
 </section>
 
 
-<section class="about-techers margin-bottom" id="about-techers">
+<section class=" section about-techers margin-bottom" id="about-teachers">
 <div class=" align container margin-top margin-bottom">
   <h2 class="secondary-header">DESPRE PROFESORI NOSTRI </h2>
   <p class="title p-align-center">
@@ -552,7 +594,7 @@
 </section>
 
 
-<section class="events margin-bottom">
+<section class=" section events margin-bottom">
   <div class="image-container">
     <img src="img/evenimente.jpeg" class="events-img" alt="Evenimente">
     <div class="over"></div>
@@ -569,7 +611,7 @@
 
 
 
-<section class="margin-bottom">
+<section class=" section margin-bottom">
   <div class="container ">
     <h2 class="secondary-header">Ce se întâmplă în blogul nostru?</h2>
     <p class="title p-align-center">
@@ -623,7 +665,7 @@
 
 
 
-<section class="container">
+<section class=" section container">
   <div class=" margin-bottom">
     <h2 class="secondary-header">Explorati Taramul zanelor</h2>
     <p class="title p-align-center">
@@ -701,7 +743,7 @@
 </div>
 
 <div id="full-image-container" class="full-image-container">
-  <img src="img/hands-painting1.jpg" class="full-image" alt="Large Painting">
+  <img src="img/hands-painting2.jpg" class="full-image" alt="Large Painting">
   <button class="close-btn">X</button>
 </div>
 
@@ -719,8 +761,80 @@
 </div>
 </section>
 
+<div class="margin-bottom">
+<section class="container section">
+  <div class="section__title">
+    <p class="section__header">
+      Pași pentru înscriere 
+    </p>
+  </div>
 
-<section class="background-register padding-bottom padding-top">
+  <div class="operations">
+    <div class="operations__tab-container">
+      <button
+        class="btn-general operations__tab operations__tab--1 operations__tab--active"
+        data-tab="1"
+      >
+        <span>01</span>Explorați opțiunile
+      </button>
+      <button class="btn-general operations__tab operations__tab--2" data-tab="2">
+        <span>02</span>Trimiteti cererea
+      </button>
+      <button class="btn-general operations__tab operations__tab--3" data-tab="3">
+        <span>03</span>Asteptati confirmarea
+      </button>
+    </div>
+    <div
+      class="operations__content operations__content--1 operations__content--active"
+    >
+      <div class="operations__icon ">
+        <ion-icon class="operations__icon--1" name="color-wand-outline"></ion-icon>
+      </div>
+      <p class="operations__header">
+        Grădinița noastră oferă o varietate larga de opțiuni pentru copilul dumneavoastră.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    <div class="operations__content operations__content--2">
+      <div class="operations__icon">
+        <ion-icon  class=" operations__icon--2" name="reader-outline"></ion-icon>
+      </div>
+      <p class="operations__header">
+        Completați datele cerute in formularul alăturat după care trimiteți cererea.
+      </p>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.
+      </p>
+    </div>
+    <div class="operations__content operations__content--3">
+      <div class="operations__icon ">
+        <ion-icon class="operations__icon--3" name="timer-outline"></ion-icon>
+      </div>
+      <p class="operations__header">
+        După ce ați completat si trimis formularul alăturat veți primi o confirmare prin email.
+      </p>
+      <p>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat.
+      </p>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<section class="section background-register padding-bottom padding-top">
   <div class=" container container-register ">
     <div>
     <h4><span>Ești interesat</span> cum poți sa iți înscrii copilul la Grădinița Tărâmul Zânelor?</h4>
@@ -732,6 +846,10 @@
 </div>
 </div>
 </section>
+
+
+
+
 
 
 

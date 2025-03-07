@@ -1,0 +1,182 @@
+h5 {
+  color: #271344;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.general-context {
+  font-size: 15px;
+}
+#input-info {
+  border-radius: 15px;
+  padding: 15px;
+}
+.general,
+label {
+  font-size: 15px;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container-grid-2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.radio-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #333;
+}
+input[type="radio"] {
+  accent-color: white;
+}
+label {
+  cursor: pointer;
+}
+.radio-btn span {
+  padding-right: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.submitButton {
+  padding: 10px 20px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+.btn {
+  display: inline-block;
+}
+.submitButton.enabled {
+  background-color: #ff4880;
+  cursor: pointer;
+}
+/*******************/
+.accordion {
+  max-width: 40rem;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  background: #ff4880;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-header.active {
+  background-color: #271344;
+  color: white;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  font-size: 15px;
+}
+.accordion.active .accordion-content {
+  display: block;
+}
+#toggle-icon {
+  font-size: 30px;
+}
+.acte {
+  width: 550px;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+ol li::marker {
+  color: #271344;
+  font-weight: 600;
+}
+
+li {
+  color: #271344;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+h6 {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #271344;
+  margin-bottom: 15px;
+}
+
+h6 ion-icon {
+  margin-right: 10px;
+  color: red;
+}
+
+.inscriere,
+.test {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+}
+
+.center-c {
+  max-width: 1200px;
+  margin: 100px auto auto;
+}
+.container-inscriere {
+  background-color: #1ab9ff;
+  padding: 25px;
+  border-radius: 15px;
+}
+.c-img {
+  position: relative;
+  display: inline-block;
+}
+
+.c-img img {
+  width: 100%;
+  display: block;
+}
+
+.text-peste-imagine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.submit-button {
+  background-color: #ff4880;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
